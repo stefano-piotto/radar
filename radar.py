@@ -15,7 +15,7 @@ labels = [
 
 # Values (EDIT HERE)
 current = [7, 8, 2, 3, 3, 5, 4]
-target  = [8, 8, 6, 4, 5, 5, 6]
+target  = [8, 8, 6, 4, 5, 10, 6]
 
 # Close the loop by repeating the first value
 current += current[:1]
