@@ -6,16 +6,14 @@ import numpy as np
 labels = [
     "Technology & IP",
     "Research & Development",
-    "Market Validation",
-    "Strategic Marketing",
-    "Business Model & GTM",
+    "Marketing",
     "Funding & Financials",
     "Industrialization & Partnerships"
 ]
 
 # Values (EDIT HERE)
-current = [7, 8, 2, 3, 3, 5, 4]
-target  = [8, 8, 6, 4, 5, 10, 6]
+current = [8, 9, 3, 5, 5]
+target  = [9, 9, 8, 7, 8]
 
 # Close the loop by repeating the first value
 current += current[:1]
@@ -26,7 +24,7 @@ angles = np.linspace(0, 2 * np.pi, len(labels), endpoint=False).tolist()
 angles += angles[:1]
 
 # Setup figure
-fig, ax = plt.subplots(figsize=(7, 7), subplot_kw=dict(polar=True))
+fig, ax = plt.subplots(figsize=(5, 5), subplot_kw=dict(polar=True))
 
 # Plot current
 ax.plot(angles, current, linewidth=2, linestyle='solid', label='Current', color='tab:blue')
@@ -42,7 +40,7 @@ ax.set_theta_direction(-1)
 ax.set_thetagrids(np.degrees(angles[:-1]), labels)
 ax.set_ylim(0, 10)
 ax.set_rlabel_position(180 / len(labels))
-ax.set_title("Radar Chart", size=14, pad=20)
+ax.set_title(" ", size=14, pad=20)
 ax.legend(loc='upper right', bbox_to_anchor=(1.3, 1.1))
 ax.yaxis.grid(False)
 ax.spines['polar'].set_visible(False)
